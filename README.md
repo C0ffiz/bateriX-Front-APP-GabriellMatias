@@ -1,6 +1,6 @@
-# Comandos do Baterix Backend App
+# Comandos do Baterix Frontend App
 
-Este documento descreve os comandos principais utilizados no projeto Baterix Backend App.
+Este documento descreve os comandos principais utilizados no projeto Baterix Frontend App.
 
 ## Comandos
 
