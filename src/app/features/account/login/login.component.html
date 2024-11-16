@@ -10,7 +10,8 @@
             <span class="bem-vindo-abateri-x-sub-31">Bem vindo ao</span><span class="text-[#779341]"> BateriX</span>
           </p>
           <p class="mt-[6px] break-words font-poppins text-[13px] text-gray-500">
-            <span class="no-tem-conta-cadastre-se-sub-0">Não tem Conta?</span><br><span class="text-[#779341]">Cadastre-se</span>
+            <span class="no-tem-conta-cadastre-se-sub-0">Não tem Conta?</span><br>
+            <a routerLink="/create-account" routerLinkActive="active" class="text-[#779341]">Cadastre-se</a>
           </p>
         </div>
         <div class="mb-[50px] flex flex-row w-full box-border justify-center">
@@ -28,18 +29,19 @@
         </div>
         <div class="mb-[36px] flex flex-col box-border w-full">
           <label class="mb-[13px] text-[16px] text-black font-poppins">E-mail</label>
-          <input class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] w-full text-[14px] text-gray-500 font-poppins" type="email" placeholder="E-mail" />
+          <input class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] w-full text-[14px] text-gray-500 font-poppins" type="email" placeholder="E-mail" [(ngModel)]="email" />
         </div>
         <div class="mb-[12px] flex flex-col box-border w-full">
           <label class="mb-[13px] text-[16px] text-black font-poppins">Senha</label>
-          <input class="rounded-[9px] border border-[#ADADAD] bg-white p-[19px_25px] w-full text-[14px] text-gray-500 font-poppins" type="password" placeholder="Senha" />
+          <input class="rounded-[9px] border border-[#ADADAD] bg-white p-[19px_25px] w-full text-[14px] text-gray-500 font-poppins" type="password" placeholder="Senha" [(ngModel)]="password" />
         </div>
         <div class="flex w-full justify-end mb-[44px]">
           <a href="#" class="text-[#4285F4] text-[13px] font-poppins">Esqueceu a senha</a>
         </div>
         <div class="flex w-full justify-end">
-          <button class="shadow-[0px_4px_19px_rgba(119,147,65,0.3)] rounded-[10px] bg-[#779341] p-[15px_6.1px] w-[236px] text-white text-[16px] font-poppins font-medium">Entrar</button>
+          <button class="shadow-[0px_4px_19px_rgba(119,147,65,0.3)] rounded-[10px] bg-[#779341] p-[15px_6.1px] w-[236px] text-white text-[16px] font-poppins font-medium" (click)="login()">Entrar</button>
         </div>
+        <div *ngIf="loginMessage" class="mt-4 text-center text-[16px] text-[#4285F4] font-poppins">{{ loginMessage }}</div>
       </div>
     </div>
 

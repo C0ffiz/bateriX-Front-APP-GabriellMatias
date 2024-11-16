@@ -33,6 +33,8 @@
       <input [(ngModel)]="password" class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] text-[14px] text-gray-500 font-poppins" type="password" placeholder="Senha" />
     </div>
     
+    <div *ngIf="errorMessage" class="mt-4 text-center text-[16px] text-[#4285F4] font-poppins">{{ errorMessage }}</div>
+
     <div class="flex justify-end">
       <button (click)="onSubmit()" class="shadow-[0px_4px_19px_rgba(119,147,65,0.3)] rounded-[10px] bg-[#779341] p-[15px_6.1px] w-[330px] text-white text-[16px] font-poppins font-medium">
         Cadastre-se
