@@ -2,18 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/components/Header/header.component';
 
 @NgModule({
   imports: [
-      BrowserModule,
-      RouterModule.forRoot(routes),
-      FormsModule
+    BrowserModule,           // Handles the browser environment and component rendering
+    RouterModule.forRoot(routes) // Configures your app's routes
   ],
-  declarations: [
-  ],
-  bootstrap: []
+  exports: [RouterModule]   // Export RouterModule for other modules to use
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

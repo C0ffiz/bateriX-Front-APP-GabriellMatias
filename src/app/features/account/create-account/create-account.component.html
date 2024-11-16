@@ -1,4 +1,4 @@
-<div class="justify-items-center rounded-[40px] bg-white/75 relative mx-auto box-border w-[636px] h-[700px] mb-[25px] mt-[100px] ">
+<div class="justify-items-center rounded-[40px] bg-white/75 relative mx-auto box-border w-[636px] h-[700px] mb-[25px] mt-[100px]">
   <div class="mb-[112px] flex flex-row gap-[340px] w-full box-border">
     <span class="absolute top-[25px] text-[#000000] text-[55px] font-poppins font-medium" style="left: 0; transform: translateX(0px);">
       Cadastro Pessoal
@@ -7,49 +7,36 @@
       <span class="bem-vindo-abateri-x-sub-31">Bem vindo ao</span><span class="text-[#779341]"> BateriX</span>
     </p>
     <p class="mt-[6px] break-words font-poppins text-[13px] text-gray-500">
-      <span class="no-tem-conta-cadastre-se-sub-0">
-        Já tem Conta?
-      </span>
-      <br>
+      <span class="no-tem-conta-cadastre-se-sub-0">Já tem Conta?</span><br>
       <a routerLink="/login" routerLinkActive="active" class="text-[#779341]">Login</a>
     </p>
   </div>
+  
   <div class="flex flex-col gap-[30px]">
     <div class="flex flex-col w-[636px]">
       <label class="mb-[8px] text-[16px] text-black font-poppins">E-mail</label>
-      <input class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] text-[14px] text-gray-500 font-poppins" type="email" placeholder="E-mail" />
+      <input [(ngModel)]="email" class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] text-[14px] text-gray-500 font-poppins" type="email" placeholder="E-mail" />
     </div>
     <div class="flex flex-row gap-[26px]">
-
       <div class="flex flex-col w-[305px]">
         <label class="mb-[8px] text-[16px] text-black font-poppins">Nome</label>
-        <input class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] text-[14px] text-gray-500 font-poppins" type="text" placeholder="Nome" />
+        <input [(ngModel)]="name" class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] text-[14px] text-gray-500 font-poppins" type="text" placeholder="Nome" />
       </div>
       <div class="flex flex-col w-[305px]">
         <label class="mb-[8px] text-[16px] text-black font-poppins">Número de telefone</label>
-        <input class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] text-[14px] text-gray-500 font-poppins" type="tel" placeholder="Número de telefone" />
+        <input [(ngModel)]="phone" class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] text-[14px] text-gray-500 font-poppins" type="tel" placeholder="Número de telefone" />
       </div>
     </div>
 
     <div class="flex flex-col mb-[30px] w-[636px]">
       <label class="mb-[8px] text-[16px] text-black font-poppins">Insira uma senha</label>
-      <input class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] text-[14px] text-gray-500 font-poppins" type="password" placeholder="Senha" />
+      <input [(ngModel)]="password" class="rounded-[9px] border border-[#4285F4] bg-white p-[19px_25px] text-[14px] text-gray-500 font-poppins" type="password" placeholder="Senha" />
     </div>
+    
     <div class="flex justify-end">
-      <button class="shadow-[0px_4px_19px_rgba(119,147,65,0.3)] rounded-[10px] bg-[#779341] p-[15px_6.1px] w-[330px] text-white text-[16px] font-poppins font-medium">Cadastre-se</button>
+      <button (click)="onSubmit()" class="shadow-[0px_4px_19px_rgba(119,147,65,0.3)] rounded-[10px] bg-[#779341] p-[15px_6.1px] w-[330px] text-white text-[16px] font-poppins font-medium">
+        Cadastre-se
+      </button>
     </div>
   </div>
 </div>
-
-<!-- <div class="mb-[50px] flex flex-row w-full box-border justify-center">
-<div class="rounded-[9px] bg-[#E9F1FF] flex items-center p-[15px] w-[298px] box-border mr-[20px]">
-  <img class="mr-[21px] w-[26px] h-[26px]" src="/assets/images/google-icon.png" alt="Google-login-icon" />
-  <div class="break-words font-poppins text-[16px] text-[#4285F4]">Login com Google</div>
-</div>
-<div class="rounded-[9px] bg-white flex items-center justify-center p-[12px] w-[60px] h-[55px] box-border mr-[13px]">
-  <img class="w-[29px] h-[29px]" src="/assets/images/facebook-icon.png" alt="Facebook-login-icon" />
-</div>
-<div class="rounded-[9px] bg-white flex items-center justify-center p-[12px] w-[60px] h-[55px] box-border">
-  <img class="w-[29px] h-[29px]" src="/assets/images/apple-icon.png" alt="Apple-login-icon" />
-</div>
-</div> -->

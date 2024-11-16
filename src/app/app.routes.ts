@@ -15,10 +15,10 @@ export const routes: Routes = [
   { path: 'create-account', component: CreateAccountComponent },
   { path: 'about-us', component: AboutComponent },
   { path: 'create-account-enterprise', component: CreateAccountEnterpriseComponent },
-  { path: 'blog', component: BlogComponent},
+  { path: 'blog', component: BlogComponent },
   { path: 'blogpost/:id', component: BlogPostComponent },
   { path: 'contact-team', component: ContactTeamComponent },
-  { path: 'recycling-locations', component: LocalDescarteComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirecionar para 'home'
-  { path: '**', redirectTo: '/home' }
+  { path: 'recycling-locations', component: LocalDescarteComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },  // Default route
+  { path: '**', redirectTo: '/home' }  // Catch-all route
 ];
